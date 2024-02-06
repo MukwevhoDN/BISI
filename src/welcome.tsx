@@ -12,6 +12,9 @@ function Welcome() {
         <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
         <label htmlFor="floatingPassword">Password</label>
       </div>
+      <div className="col-auto">
+    <button type="submit" className="btn btn-primary mb-3">Confirm identity</button>
+  </div>
     </div>
   );
 }
