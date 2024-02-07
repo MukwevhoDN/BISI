@@ -1,22 +1,28 @@
 import React from 'react';
+import './App.css'; // Import CSS file
 
 function Welcome() {
   return (
-    <div>
-      <h1>BISI</h1>
-      <div className="form-floating mb-3">
-        <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-        <label htmlFor="floatingInput">Email address</label>
-      </div>
-      <div className="form-floating">
-        <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-        <label htmlFor="floatingPassword">Password</label>
-      </div>
-      <div className="col-auto">
-    <button type="submit" className="btn btn-primary mb-3">Confirm identity</button>
-  </div>
+    <div className="form-container">
+      <form action="/action_page.php">
+        <div className="mb-3 mt-3">
+          <label htmlFor="email" className="form-label">Email:</label>
+          <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="pwd" className="form-label">Password:</label>
+          <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="pswd" />
+        </div>
+        <div className="form-check mb-3">
+          <label className="form-check-label">
+            <input className="form-check-input" type="checkbox" name="remember" /> Remember me
+          </label>
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </form>
     </div>
   );
 }
 
 export default Welcome;
+
